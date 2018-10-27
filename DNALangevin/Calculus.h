@@ -6,7 +6,7 @@
 #include "pch.h"
 
 double Derivative(double (*f) (double), double l);
-Vec<double> Gradient(double (*f)(Vec<double>), Vec<double>);
+Vector<double> Gradient(double (*f)(Vec<double>), Vec<double>);
 
 
 inline double Derivative(double(*f)(double), double l)
@@ -20,11 +20,14 @@ inline double Derivative(double(*f)(double), double l)
 	//return 0.0;
 }
 
-inline Vec<double> Gradient(double(*f)(Vec<double>), Vec<double> r)
+inline Vector<double> Gradient(double(*f)(Vec<double>), Vec<double> r)
 {
-	Vec<double> force;
+	Vec<double> result;
+	double h = 0.00001;
+	double xPlus_h = r.x + h;
+	double xMinus_h = r.x - h;
 
-	return Vec<double>();
+	return Vector<double>();
 }
 
 

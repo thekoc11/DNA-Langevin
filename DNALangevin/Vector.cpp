@@ -22,6 +22,17 @@ void Vector<T>::setZ(T & v)
 }
 
 template<typename T>
+Vec<T> Vector<T>::getPolarCordinates()
+{
+	Vec<T> p;
+	p.x = r;
+	p.y = theta;
+	p.z = phi;
+	return p;
+	//return Vec<T>(r, theta, phi);
+}
+
+template<typename T>
 Vector<T>::~Vector()
 {
 }

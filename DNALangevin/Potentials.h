@@ -1,4 +1,6 @@
 #pragma once
+#include"Bead.h"
+#include"ViralCapsid.h"
 class Potentials
 {
 	double sigma;
@@ -6,12 +8,12 @@ class Potentials
 	double kStretch;
 	double kBend;
 	double l0;
-	double cos0;
+	double theta0;
 public:
 	Potentials();
-	double Ulj(Vec<double>);
-	double Ustretch(Vec<double>);
-	double Ubend(Vec<double>);
+	double Ulj(Vector<double>);
+	double Ustretch(Bead*, Bead*);
+	double Ubend(Bead*, Bead*, Bead*);
 	~Potentials();
 };
 

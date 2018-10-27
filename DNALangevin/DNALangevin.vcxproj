@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -151,12 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bead.h" />
     <ClInclude Include="Calculus.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Potentials.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="ViralCapsid.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bead.cpp" />
     <ClCompile Include="DNALangevin.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -166,6 +169,7 @@
     </ClCompile>
     <ClCompile Include="Potentials.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="ViralCapsid.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
